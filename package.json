@@ -1,0 +1,23 @@
+{
+  "name": "hotel-jj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "conexion.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barbox11/Hotel-JJ.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barbox11/Hotel-JJ/issues"
+  },
+  "homepage": "https://github.com/barbox11/Hotel-JJ#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
