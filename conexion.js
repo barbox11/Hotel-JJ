@@ -23,7 +23,11 @@ const port = 3000;
 //});
 app.set ("view engine","ejs");
 
-app.get("index.ejs", function(req,res){
+
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+
+app.get("/index.ejs", function(req,res){
     res.render("index");
 });
 

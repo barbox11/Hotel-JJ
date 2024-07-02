@@ -37,7 +37,7 @@
         font-family: "Montserrat", sans-serif;
         font-weight: 300;
         letter-spacing: 0.1rem;
-        color: #ccc;
+        color: #b4b2b2;
     }
     input::placeholder {
         font-size: 0.85rem;
@@ -123,7 +123,7 @@
         align-items: center;
         width: 100%;
         height: 100vh;
-        background: #ccc;
+        background: #000000;
         background-size: cover;
     }
     .user_options-container {
@@ -145,7 +145,7 @@
     .user_options-unregistered {
         width: 50%;
         padding: 75px 45px;
-        color: #fff;
+        color: #f3f3f3;
         font-weight: 300;
     }
     
@@ -165,18 +165,18 @@
     .user_registered-login,
     .user_unregistered-signup {
         margin-top: 30px;
-        border: 1px solid #ccc;
+        border: 1px solid #e20e0e;
         border-radius: 3px;
         padding: 10px 30px;
-        color: #fff;
+        color: #f7f4f4;
         text-transform: uppercase;
         line-height: 1em;
         letter-spacing: 0.2rem;
-        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        transition: background-color 0.2s ease-in-out, color 0.5s ease-in-out;
     }
     .user_registered-login:hover,
     .user_unregistered-signup:hover {
-        color: rgba(34, 34, 34, 0.85);
+        color: rgba(230, 36, 36, 0.85);
         background-color: #ccc;
     }
     
@@ -205,7 +205,7 @@
         font-weight: 500;
         line-height: 1em;
         text-transform: uppercase;
-        color: #e8716d;
+        color: #020202;
         letter-spacing: 0.1rem;
     }
     .user_options-forms .forms_field:not(:last-of-type) {
@@ -213,17 +213,17 @@
     }
     .user_options-forms .forms_field-input {
         width: 100%;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #000000;
         padding: 6px 20px 6px 6px;
         font-family: "Montserrat", sans-serif;
         font-size: 1rem;
         font-weight: 300;
-        color: gray;
+        color: rgb(0, 0, 0);
         letter-spacing: 0.1rem;
         transition: border-color 0.2s ease-in-out;
     }
     .user_options-forms .forms_field-input:focus {
-        border-color: gray;
+        border-color: rgb(165, 30, 30);
     }
     .user_options-forms .forms_buttons {
         display: flex;
@@ -234,7 +234,7 @@
     .user_options-forms .forms_buttons-forgot {
         font-family: "Montserrat", sans-serif;
         letter-spacing: 0.1rem;
-        color: #666472;
+        color: #050505;
         text-decoration: underline;
         transition: color 0.2s ease-in-out;
     }
@@ -242,7 +242,7 @@
         color: #b3b3b3;
     }
     .user_options-forms .forms_buttons-action {
-        background-color: #e8716d;
+        background-color: #000000;
         border-radius: 3px;
         padding: 10px 35px;
         font-size: 1rem;
@@ -254,7 +254,7 @@
         transition: background-color 0.2s ease-in-out;
     }
     .user_options-forms .forms_buttons-action:hover {
-        background-color: #e14641;
+        background-color: #d41f19;
     }
     .user_options-forms .user_forms-signup,
     .user_options-forms .user_forms-login {
