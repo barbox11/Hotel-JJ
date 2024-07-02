@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styleHome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="grid-container">
+        <div id="accordian">
+                  <div class="navbar-logo"><img src="logo\png\logo-black-removebg-preview.png" alt="logo" class="navbar-logo-img"><span class="navbar-logo-text">Hotel J&J</span></div>
+                  <ul class="show-dropdown main-navbar">
+                    <div class="selector-active">
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                    </div>
+                    <li data-role="Administrador, Recepcionista, Cliente">
+                        <a href="javascript:void(0);" class="nav-link" data-target="#address-book">
+                            <i class="fa-solid fa-calendar-day"></i>Ver reservación
+                        </a>
+                    </li>
+                    <li class="active" data-role="Administrador, Recepcionista, Cliente">
+                        <a href="javascript:void(0);" class="nav-link" data-target="#form-reservacion">
+                            <i class="fa-regular fa-calendar-days"></i>Crear reservación
+                        </a>
+                    </li>
+                    <li data-role="Administrador, Recepcionista">
+                        <a href="javascript:void(0);" class="nav-link" data-target="#habitaciones">
+                            <i class="far fa-clone"></i>Habitaciones
+                        </a>
+                    </li>
+                    <li data-role="Administrador, Recepcionista">
+                        <a href="javascript:void(0);" class="nav-link" data-target="#reservacion">
+                            <i class="far fa-calendar-alt"></i>Ver reservaciones
+                        </a>
+                    </li>
+                    <li data-role="Administrador">
+                        <a href="javascript:void(0);">
+                            <i class="far fa-chart-bar"></i>Usuarios
+                        </a>
+                    </li>
+                    <li data-role="Administrador">
+                        <a href="javascript:void(0);">
+                            <i class="far fa-copy"></i>Historial
+                        </a>
+                    </li>
+                    <li data-role="Administrador, Recepcionista">
+                        <a href="javascript:void(0);">
+                            <i class="far fa-bookmark"></i>Gestionar cliente
+                        </a>
+                    </li>
+                    <li data-role="Administrador, Recepcionista">
+                        <a href="javascript:void(0);">
+                            <i class="far fa-envelope"></i>Mail
+                        </a>
+                    </li>
+                </ul>
+                
+              </div>
+        <div>
+            <div class="container">
+                <div id="form-reservacion" class="content-section active">
+              <div class="form-container">
+                  <h2>Formulario de Reservación</h2>
+                  <form action="/submit" method="post">
+                      <label for="nombre">Nombre Completo</label>
+                      <input type="text" id="nombre" name="nombre" required>
+      
+                      <label for="email">Correo Electrónico</label>
+                      <input type="email" id="email" name="email" required>
+      
+                      <label for="telefono">Teléfono</label>
+                      <input type="tel" id="telefono" name="telefono" required>
+      
+                      <label for="fecha-llegada">Fecha de Llegada</label>
+                      <input type="date" id="fecha-llegada" name="fecha-llegada" required>
+      
+                      <label for="fecha-salida">Fecha de Salida</label>
+                      <input type="date" id="fecha-salida" name="fecha-salida" required>
+      
+                      <label for="mensaje">Mensaje</label>
+                      <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+                      <table class="table-habitacion-dispo">
+                        <label for="Habitaciones-disponibles">Habitaciones disponibles</label>
+                        <thead>
+                          <tr>
+                            <th class="table-form">Tipo de Habitación</th>
+                            <th class="table-form">Precio (por noche)</th>
+                            <th class="table-form">Seleccionar</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="table-form">Single</td>
+                            <td class="table-form">$100</td>
+                            <td class="table-form"><input type="radio" name="habitacion" value="single"></td>
+                          </tr>
+                          <tr>
+                            <td class="table-form">Doble</td>
+                            <td class="table-form">$150</td>
+                            <td class="table-form"><input type="radio" name="habitacion" value="doble"></td>
+                          </tr>
+                          <tr>
+                            <td class="table-form">Suite</td>
+                            <td class="table-form">$250</td>
+                            <td class="table-form"><input type="radio" name="habitacion" value="suite"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="button-enviar"><button type="submit">Enviar</button></div>
+                      
+                  </form>
+              </div>
+              
+            </div>
+            </div>
+          <div id="address-book" class="content-section">
+            <h2>Reserva de habitación</h2>
+            <form action="" method="post">
+                <table class="table-fill">
+                    <thead>
+                    <tr>
+                    <th class="text-left">Fecha</th>
+                    <th class="text-left">Habitación</th>
+                    <th class="text-left">Personas</th>
+                    </tr>
+                    </thead>
+                    <tbody class="table-hover">
+                    <tr>
+                    
+                    <td class="text-left">15/02/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    </tr>
+                    <tr>
+                    
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    </tr>
+                    <tr>
+                    
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    </tr>
+                    <tr>
+                    
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    </tr>
+                    <tr>
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    </tr>
+                    <tr>
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    </tr>
+                    <tr>
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <div class="button-editar"><button class="editar" type="#">Editar</button>
+                        <button class="editar" type="submit">Cancelar</button></div>
+                    
+                    
+            </form>
+        </div>
+        <div id="habitaciones" class="content-section">
+            <h2>Reserva de habitación</h2>
+            <form action="" method="post">
+                <table class="table-fill">
+                    <thead>
+                    <tr>
+                    <th class="text-left">Fecha</th>
+                    <th class="text-left">Habitación</th>
+                    <th class="text-left">Personas</th>
+                    <th class="text-left">Estado</th>
+                    </tr>
+                    </thead>
+                    <tbody class="table-hover">
+                    <tr>
+                    
+                    <td class="text-left">15/02/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    <td class="text-left">Ocupado</td>
+                    </tr>
+                    <tr>
+                    
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    <td class="text-left">Libre</td>
+                    </tr>
+                    <tr>
+                    
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    <td class="text-left">Ocupado</td>
+                    </tr>
+                    <tr>
+                    
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    <td class="text-left">Libre</td>
+                    </tr>
+                    <tr>
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    <td class="text-left">Ocupado</td>
+                    </tr>
+                    <tr>
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    <td class="text-left">Libre</td>
+                    </tr>
+                    <tr>
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    <td class="text-left">Ocupado</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <div class="button-editar"><button class="editar" type="#">Editar</button></div>
+                    
+                    
+            </form>
+        </div>
+        <div id="reservacion" class="content-section">
+            <h2>Reserva de habitación</h2>
+            <form action="" method="post">
+                <table class="table-fill">
+                    <thead>
+                    <tr>
+                    <th class="text-left">Nombre</th>
+                    <th class="text-left">Fecha</th>
+                    <th class="text-left">Habitación</th>
+                    <th class="text-left">Personas</th>
+                    <th class="text-left">Estado</th>
+                    </tr>
+                    </thead>
+                    <tbody class="table-hover">
+                    <tr>
+                    <td class="text-left">Pepito Perez</td>
+                    <td class="text-left">15/02/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    <td class="text-left">Ocupado</td>
+                    </tr>
+                    <tr>
+                    <td class="text-left">Pepito Perez</td>
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    <td class="text-left">Libre</td>
+                    </tr>
+                    <tr>
+                    <td class="text-left">Pepito Perez</td>
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    <td class="text-left">Ocupado</td>
+                    </tr>
+                    <tr>
+                    <td class="text-left">Pepito Perez</td>
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    <td class="text-left">Libre</td>
+                    </tr>
+                    <tr>
+                    <td class="text-left">Pepito Perez</td>
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    <td class="text-left">Ocupado</td>
+                    </tr>
+                    <tr>
+                    <td class="text-left">Pepito Perez</td>
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    <td class="text-left">Libre</td>
+                    </tr>
+                    <tr>
+                    <td class="text-left">Pepito Perez</td>
+                    <td class="text-left">26/04/2024</td>
+                    <td class="text-left">102</td>
+                    <td class="text-left">2</td>
+                    <td class="text-left">Ocupado</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <div class="button-editar"><button class="editar" type="#">Editar</button>
+                    
+            </form>
+        </div>
+        </div>
+        
+      </div>
+    <!-- Cargar jQuery primero -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Referenciar el archivo JavaScript -->
+    <script src="scriptHome.js"></script>
+
+    
+</body>
+</html>
