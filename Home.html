@@ -38,23 +38,23 @@
                         </a>
                     </li>
                     <li data-role="Administrador">
-                        <a href="javascript:void(0);">
+                        <a href="javascript:void(0);" class="nav-link" data-target="#usuarios">
                             <i class="far fa-chart-bar"></i>Usuarios
                         </a>
                     </li>
                     <li data-role="Administrador">
-                        <a href="javascript:void(0);">
+                        <a href="javascript:void(0);" class="nav-link" data-target="#historial">
                             <i class="far fa-copy"></i>Historial
                         </a>
                     </li>
                     <li data-role="Administrador, Recepcionista">
-                        <a href="javascript:void(0);">
+                        <a href="javascript:void(0);" class="nav-link" data-target="#gestionarClientes">
                             <i class="far fa-bookmark"></i>Gestionar cliente
                         </a>
                     </li>
                     <li data-role="Administrador, Recepcionista">
-                        <a href="javascript:void(0);">
-                            <i class="far fa-envelope"></i>Mail
+                        <a href="javascript:void(0);" class="nav-link" data-target="#mail">
+                            <i class="far fa-envelope"></i>Mensaje
                         </a>
                     </li>
                 </ul>
@@ -65,7 +65,7 @@
                 <div id="form-reservacion" class="content-section active">
               <div class="form-container">
                   <h2>Formulario de Reservación</h2>
-                  <form action="/submit" method="post">
+                  <form action="" method="post">
                       <label for="nombre">Nombre Completo</label>
                       <input type="text" id="nombre" name="nombre" required>
       
@@ -89,22 +89,26 @@
                         <thead>
                           <tr>
                             <th class="table-form">Tipo de Habitación</th>
+                            <th class="table-form">Cantidad</th>
                             <th class="table-form">Precio (por noche)</th>
                             <th class="table-form">Seleccionar</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td class="table-form">Single</td>
+                            <td class="table-form"><img class="myImg" src="Img\pexels-fotoaibe-1743231.jpg" alt="Habitación individual"></td>
+                            <td class="table-form">individual</td>
                             <td class="table-form">$100</td>
                             <td class="table-form"><input type="radio" name="habitacion" value="single"></td>
                           </tr>
                           <tr>
+                            <td class="table-form"><img class="myImg" src="Img\pexels-pixabay-164595.jpg" alt="Habitación cama doble"></td>
                             <td class="table-form">Doble</td>
                             <td class="table-form">$150</td>
                             <td class="table-form"><input type="radio" name="habitacion" value="doble"></td>
                           </tr>
                           <tr>
+                            <td class="table-form"><img class="myImg" src="Img\pexels-picasjoe-11362525.jpg" alt="Habitación tipo Suite"></td>
                             <td class="table-form">Suite</td>
                             <td class="table-form">$250</td>
                             <td class="table-form"><input type="radio" name="habitacion" value="suite"></td>
@@ -127,6 +131,7 @@
                     <th class="text-left">Fecha</th>
                     <th class="text-left">Habitación</th>
                     <th class="text-left">Personas</th>
+                    <th class="table-form">Seleccionar</th>
                     </tr>
                     </thead>
                     <tbody class="table-hover">
@@ -135,39 +140,46 @@
                     <td class="text-left">15/02/2024</td>
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
+                    <td class="table-form"><input type="radio" name="habitacion" value=""></td>
                     </tr>
                     <tr>
                     
                     <td class="text-left">26/04/2024</td>
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
+                    <td class="table-form"><input type="radio" name="habitacion" value=""></td>
                     </tr>
                     <tr>
                     
                     <td class="text-left">26/04/2024</td>
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
+                    <td class="table-form"><input type="radio" name="habitacion" value=""></td>
                     </tr>
                     <tr>
                     
                     <td class="text-left">26/04/2024</td>
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
+                    <td class="table-form"><input type="radio" name="habitacion" value=""></td>
                     </tr>
                     <tr>
                     <td class="text-left">26/04/2024</td>
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
+                    <td class="table-form"><input type="radio" name="habitacion" value=""></td>
                     </tr>
                     <tr>
                     <td class="text-left">26/04/2024</td>
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
+                    <td class="table-form"><input type="radio" name="habitacion" value=""></td>
                     </tr>
                     <tr>
                     <td class="text-left">26/04/2024</td>
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
+                    <td class="table-form"><input type="radio" name="habitacion" value=""></td>
                     </tr>
                     </tbody>
                     </table>
@@ -187,6 +199,7 @@
                     <th class="text-left">Habitación</th>
                     <th class="text-left">Personas</th>
                     <th class="text-left">Estado</th>
+                    <th class="table-form">Seleccionar</th>
                     </tr>
                     </thead>
                     <tbody class="table-hover">
@@ -196,6 +209,7 @@
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
                     <td class="text-left">Ocupado</td>
+                    <td class="table-form"><input type="radio" name="habitacion"></td>
                     </tr>
                     <tr>
                     
@@ -203,6 +217,7 @@
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
                     <td class="text-left">Libre</td>
+                    <td class="table-form"><input type="radio" name="habitacion"></td>
                     </tr>
                     <tr>
                     
@@ -210,6 +225,7 @@
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
                     <td class="text-left">Ocupado</td>
+                    <td class="table-form"><input type="radio" name="habitacion"></td>
                     </tr>
                     <tr>
                     
@@ -217,24 +233,28 @@
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
                     <td class="text-left">Libre</td>
+                    <td class="table-form"><input type="radio" name="habitacion"></td>
                     </tr>
                     <tr>
                     <td class="text-left">26/04/2024</td>
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
                     <td class="text-left">Ocupado</td>
+                    <td class="table-form"><input type="radio" name="habitacion"></td>
                     </tr>
                     <tr>
                     <td class="text-left">26/04/2024</td>
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
                     <td class="text-left">Libre</td>
+                    <td class="table-form"><input type="radio" name="habitacion"></td>
                     </tr>
                     <tr>
                     <td class="text-left">26/04/2024</td>
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
                     <td class="text-left">Ocupado</td>
+                    <td class="table-form"><input type="radio" name="habitacion"></td>
                     </tr>
                     </tbody>
                     </table>
@@ -249,11 +269,12 @@
                 <table class="table-fill">
                     <thead>
                     <tr>
-                    <th class="text-left">Nombre</th>
+                    <th  class="text-left">Nombre</th>
                     <th class="text-left">Fecha</th>
                     <th class="text-left">Habitación</th>
                     <th class="text-left">Personas</th>
                     <th class="text-left">Estado</th>
+                    <th class="text-left">Seleccionar</th>
                     </tr>
                     </thead>
                     <tbody class="table-hover">
@@ -263,6 +284,7 @@
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
                     <td class="text-left">Ocupado</td>
+                    <td class="table-form"><input type="radio" name="habitacion" ></td>
                     </tr>
                     <tr>
                     <td class="text-left">Pepito Perez</td>
@@ -270,6 +292,7 @@
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
                     <td class="text-left">Libre</td>
+                    <td class="table-form"><input type="radio" name="habitacion" ></td>
                     </tr>
                     <tr>
                     <td class="text-left">Pepito Perez</td>
@@ -277,6 +300,7 @@
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
                     <td class="text-left">Ocupado</td>
+                    <td class="table-form"><input type="radio" name="habitacion" ></td>
                     </tr>
                     <tr>
                     <td class="text-left">Pepito Perez</td>
@@ -284,6 +308,7 @@
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
                     <td class="text-left">Libre</td>
+                    <td class="table-form"><input type="radio" name="habitacion" ></td>
                     </tr>
                     <tr>
                     <td class="text-left">Pepito Perez</td>
@@ -291,6 +316,7 @@
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
                     <td class="text-left">Ocupado</td>
+                    <td class="table-form"><input type="radio" name="habitacion" ></td>
                     </tr>
                     <tr>
                     <td class="text-left">Pepito Perez</td>
@@ -298,6 +324,7 @@
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
                     <td class="text-left">Libre</td>
+                    <td class="table-form"><input type="radio" name="habitacion" ></td>
                     </tr>
                     <tr>
                     <td class="text-left">Pepito Perez</td>
@@ -305,16 +332,167 @@
                     <td class="text-left">102</td>
                     <td class="text-left">2</td>
                     <td class="text-left">Ocupado</td>
+                    <td class="table-form"><input type="radio" name="habitacion"></td>
                     </tr>
                     </tbody>
                     </table>
                     <div class="button-editar"><button class="editar" type="#">Editar</button>
                     
             </form>
-        </div>
+            
         </div>
         
-      </div>
+        </div>
+        <div id="usuarios" class="content-section">
+            <h2>Usuarios</h2>
+            
+                <table class="table-fill">
+                    <thead>
+                      <tr>
+                        <th class="text-left">Nombre</th>
+                        <th class="text-left">Tipo</th>
+                        <th class="text-left">Seleccionar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left">Fila 1, Celda 1</td>
+                        <td class="text-left">Fila 1, Celda 2</td>
+                        <td class="table-form"><input type="radio" name="habitacion"></td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">Fila 2, Celda 1</td>
+                        <td> class="text-left"Fila 2, Celda 2</td>
+                        <td class="table-form"><input type="radio" name="habitacion"></td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">Fila 3, Celda 1</td>
+                        <td class="text-left">Fila 3, Celda 2</td>
+                        <td class="table-form"><input type="radio" name="habitacion"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            
+        </div>
+
+        <div id="historial" class="content-section">
+            <h2>Historial</h2>
+            <table class="table-fill">
+                <thead>
+                    <tr>
+                        <th class="text-left">Reserva ID</th>
+                        <th class="text-left">Cliente ID</th>
+                        <th class="text-left">Nombre del Cliente</th>
+                        <th class="text-left">Habitación</th>
+                        <th class="text-left">Fecha de Entrada</th>
+                        <th class="text-left">Fecha de Salida</th>
+                        <th class="text-left">Estado de Reserva</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-left">001</td>
+                        <td class="text-left">1001</td>
+                        <td class="text-left">Juan Pérez</td>
+                        <td class="text-left">101</td>
+                        <td class="text-left">2024-07-01</td>
+                        <td class="text-left">2024-07-05</td>
+                        <td class="text-left">Completada</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">002</td>
+                        <td class="text-left">1002</td>
+                        <td class="text-left">Ana García</td>
+                        <td class="text-left">102</td>
+                        <td class="text-left">2024-07-03</td>
+                        <td class="text-left">2024-07-07</td>
+                        <td class="text-left">Cancelada</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">003</td>
+                        <td class="text-left">1003</td>
+                        <td class="text-left">Luis Martínez</td>
+                        <td class="text-left">103</td>
+                        <td class="text-left">2024-07-04</td>
+                        <td class="text-left">2024-07-10</td>
+                        <td class="text-left">Activa</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">004</td>
+                        <td class="text-left">1004</td>
+                        <td class="text-left">María Rodríguez</td>
+                        <td class="text-left">104</td>
+                        <td class="text-left">2024-07-02</td>
+                        <td class="text-left">2024-07-06</td>
+                        <td class="text-left">Completada</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">005</td>
+                        <td class="text-left">1005</td>
+                        <td class="text-left">Carlos López</td>
+                        <td class="text-left">105</td>
+                        <td class="text-left">2024-07-05</td>
+                        <td class="text-left">2024-07-09</td>
+                        <td class="text-left">Activa</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="gestionarClientes" class="content-section">
+            <h2>Gestionar clientes</h2>
+            <table class="table-fill">
+                <thead>
+                  <tr>
+                    <th class="text-left">Nombre</th>
+                    <th class="text-left">Tipo</th>
+                    <th class="text-left">Seleccionar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-left">Fila 1, Celda 1</td>
+                    <td class="text-left">Fila 1, Celda 2</td>
+                    <td class="table-form"><input type="radio" name="habitacion"></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">Fila 2, Celda 1</td>
+                    <td> class="text-left"Fila 2, Celda 2</td>
+                    <td class="table-form"><input type="radio" name="habitacion"></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">Fila 3, Celda 1</td>
+                    <td class="text-left">Fila 3, Celda 2</td>
+                    <td class="table-form"><input type="radio" name="habitacion"></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+
+        <div id="mail" class="content-section">
+            <h2>Enviar mensaje</h2>
+            <div class="form-container">
+                <h2>Formulario de mensaje</h2>
+                <form action="" method="post">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" required>
+    
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+    
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+                    
+                    <div class="button-enviar"><button type="submit">Enviar</button></div>
+                    
+                </form>
+            </div>
+        </div>
+
     <!-- Cargar jQuery primero -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Referenciar el archivo JavaScript -->
@@ -322,4 +500,10 @@
 
     
 </body>
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+  
 </html>
