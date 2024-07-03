@@ -45,7 +45,7 @@
             </div>
             <div class="user_forms-signup">
             <h2 class="forms_title">Registrarse</h2>
-            <form class="forms_form" action="/validar" method="POST">
+            <form class="forms_form"  method="POST">
                 <fieldset class="forms_fieldset">
                 <div class="forms_field">
                     <input type="text" placeholder="Nombre completo" class="forms_field-input" required name="nombre" />
@@ -61,6 +61,25 @@
                 <input type="submit" value="Crear cuenta" class="forms_buttons-action">
                 </div>
             </form>
+            <script>
+                document.querySelector('.forms_form').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(this);
+                    
+                    fetch('/crear-cuenta', {
+                        method: 'POST',
+                        body: new URLSearchParams(formData)
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        alert(data);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+                });
+            </script>
             </div>
         </div>
         </div>
