@@ -1,47 +1,59 @@
-// const mysql = require('mysql');
-// const express = require('express');
+    const mysql = require('mysql');
+    const express = require('express');
 
-// const app = express();
-// const port = 3000;
+    const app = express();
+    const port = 3000;
+    
+    //Configura la conexión a la base de datos
+    const connection = mysql.createConnection({
+        host: '127.0.0.1' ,
+        user: 'root',
+    password: '',
+        database: 'hotel'
+    });
 
-
-
-// // Configura la conexión a la base de datos
-// //const connection = mysql.createConnection({
-//     //host: '127.0.0.1' ,
-//     //user: 'root',
-//    // password: '',
-//     //database: 'hotel'
-// //});
-
-// //connection.connect(function(err){
-//    // if(err){
-//        // throw err;
-//    // }else{
-//        // console.log("conexon exitosa");
-//     //}
-// //});
-// app.set ("view engine","ejs");
+    connection.connect(function(err){
+    if(err){
+        throw err;
+    }else{
+        console.log("conexon exitosa");
+        }
+    });
+    app.set ("view engine","ejs");
 
 
-// app.use(express.json());
-// app.use(express.urlencoded({extended:false}));
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: false }));
 
-// app.get("/index.ejs", function(req,res){
-//     res.render("index");
-// });
+    app.get("/", function(req,res){
+        res.render("index");
+    });
 
-// app.post("/validar", function(req,res){
-//     const datos = req.body;
+    app.post("/api/validar", function(req,res){
+        const datos = req.body;
 
-//     console.log(datos);
-// })
+        let nombre = datos.nom;
+        let email = datos.em;
+        let contrasena = datos.con;
 
+        let registrar = "INSERT INTO login (nombre, email, contrasena) VALUES ('"+nombre+"','"+email+"','"+contrasena+"')";
 
-// // Inicia el servidor
-// app.listen(3000, function(){
-//     console.log(`Servidor corriendo en http://127.0.0.1:${3000}`);
-// });
+        connection.query(registrar, function(error){
+            if(error){
+                throw error;
+            }else{
+                console.log("datos almacenados correctamente");
+            }
+        });
+    });
+    app.get("/api/validar", function(req, res) {
+        res.status(405).send("Método no permitido");
+    });
+
+    // Inicia el servidor
+    app.listen(3000, function(){
+        console.log(`Servidor corriendo en http://127.0.0.1:${3000}`);
+    });
 // const express = require('express');
 // const mysql = require('mysql');
 // const bodyParser = require('body-parser');
@@ -98,60 +110,60 @@
 //     });
 
 
-        const express = require('express');
-        const mysql = require('mysql');
-        const bodyParser = require('body-parser');
-        const path = require('path');
+    //     const express = require('express');
+    //     const mysql = require('mysql');
+    //     const bodyParser = require('body-parser');
+    //     const path = require('path');
 
-        const app = express();
-        const port = 3000;
+    //     const app = express();
+    //     const port = 3000;
 
-        // Configuración de la conexión a MySQL
-        const connection = mysql.createConnection({
-        host: '127.0.0.1',
-        user: 'root',
-        password: '',
-        database: 'hotel'
-        });
+    //     // Configuración de la conexión a MySQL
+    //     const connection = mysql.createConnection({
+    //     host: '127.0.0.1',
+    //     user: 'root',
+    //     password: '',
+    //     database: 'hotel'
+    //     });
 
-        connection.connect((err) => {
-        if (err) {
-            console.error('Error al conectar a la base de datos: ' + err.stack);
-            return;
-        }
-        console.log('Conectado a la base de datos MySQL.');
-        });
+    //     connection.connect((err) => {
+    //     if (err) {
+    //         console.error('Error al conectar a la base de datos: ' + err.stack);
+    //         return;
+    //     }
+    //     console.log('Conectado a la base de datos MySQL.');
+    //     });
 
-    // Middleware
-    app.use(bodyParser.urlencoded({ extended: false }));
-    app.use(express.static(path.join(__dirname, 'public')));
+    // // Middleware
+    // app.use(bodyParser.urlencoded({ extended: false }));
+    // app.use(express.static(path.join(__dirname, 'public')));
 
-    // Configurar EJS como motor de vistas
-    app.set('view engine', 'ejs');
-    app.set('views', path.join(__dirname, 'views'));
+    // // Configurar EJS como motor de vistas
+    // app.set('view engine', 'ejs');
+    // app.set('views', path.join(__dirname, 'views'));
 
-    // Ruta para el formulario
-    app.get('/', (req, res) => {
-    res.render('index');
-    });
+    // // Ruta para el formulario
+    // app.get('/', (req, res) => {
+    // res.render('index');
+    // }); 
 
-        // Ruta para procesar el formulario
-        app.post('/index.ejs', (req, res) => {
-        const { nombre, email, contrasena } = req.body;
+    //     // Ruta para procesar el formulario
+    //     app.post('/index.ejs', (req, res) => {
+    //     const { nombre, email, contrasena } = req.body;
         
-        const query = 'INSERT INTO login (nombre, email, contrasena) VALUES (?, ?, ?)';
-        connection.query(query, [nombre, email, contrasena], (error, results) => {
-            if (error) {
-            console.error('Error al insertar datos: ', error);
-            res.status(500).send('Error al crear la cuenta');
-            } else {
-            console.log('Cuenta creada con éxito');
-            res.status(200).send('Cuenta creada con éxito');
-            }
-        });
-        });
+    //     const query = 'INSERT INTO login (nombre, email, contrasena) VALUES (?, ?, ?)';
+    //     connection.query(query, [nombre, email, contrasena], (error, results) => {
+    //         if (error) {
+    //         console.error('Error al insertar datos: ', error);
+    //         res.status(500).send('Error al crear la cuenta');
+    //         } else {
+    //         console.log('Cuenta creada con éxito');
+    //         res.status(200).send('Cuenta creada con éxito');
+    //         }
+    //     });
+    //     });
 
-        app.listen(port, () => {
-        console.log(`Servidor corriendo en http://localhost:${port}`);
-        });
+    //     app.listen(port, () => {
+    //     console.log(`Servidor corriendo en http://localhost:${port}`);
+    //     });
 

@@ -45,41 +45,23 @@
             </div>
             <div class="user_forms-signup">
             <h2 class="forms_title">Registrarse</h2>
-            <form class="forms_form"  method="POST">
+            f<form class="forms_form" action="/api/validar" method="POST">
                 <fieldset class="forms_fieldset">
-                <div class="forms_field">
-                    <input type="text" placeholder="Nombre completo" class="forms_field-input" required name="nombre" />
-                </div>
-                <div class="forms_field">
-                    <input type="email" placeholder="Email" class="forms_field-input" required name="email"/>
-                </div>
-                <div class="forms_field">
-                    <input type="password" placeholder="contraseña" class="forms_field-input" required name="contrasena"/>
-                </div>
+                    <div class="forms_field">
+                        <input type="text" id="nom" placeholder="Nombre completo" class="forms_field-input" required name="nom" />
+                    </div>
+                    <div class="forms_field">
+                        <input type="email" id="em" placeholder="Email" class="forms_field-input" required name="em"/>
+                    </div>
+                    <div class="forms_field">
+                        <input type="password" id="con" placeholder="Contraseña" class="forms_field-input" required name="con"/>
+                    </div>
                 </fieldset>
                 <div class="forms_buttons">
-                <input type="submit" value="Crear cuenta" class="forms_buttons-action">
+                    <button type="submit" id="btncrearcuenta" class="forms_buttons-action">Crear cuenta</button>
                 </div>
             </form>
-            <script>
-                document.querySelector('.forms_form').addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    const formData = new FormData(this);
-                    
-                    fetch('/crear-cuenta', {
-                        method: 'POST',
-                        body: new URLSearchParams(formData)
-                    })
-                    .then(response => response.text())
-                    .then(data => {
-                        alert(data);
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
-                });
-            </script>
+            
             </div>
         </div>
         </div>
