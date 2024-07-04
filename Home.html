@@ -1,509 +1,516 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="styleHome.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="styleHome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-    <div class="grid-container">
-        <div id="accordian">
-                  <div class="navbar-logo"><img src="logo\png\logo-black-removebg-preview.png" alt="logo" class="navbar-logo-img"><span class="navbar-logo-text">Hotel J&J</span></div>
-                  <ul class="show-dropdown main-navbar">
-                    <div class="selector-active">
-                        <div class="top"></div>
-                        <div class="bottom"></div>
-                    </div>
-                    <li data-role="Administrador, Recepcionista, Cliente">
-                        <a href="javascript:void(0);" class="nav-link" data-target="#address-book">
-                            <i class="fa-solid fa-calendar-day"></i>Ver reservación
-                        </a>
-                    </li>
-                    <li class="active" data-role="Administrador, Recepcionista, Cliente">
-                        <a href="javascript:void(0);" class="nav-link" data-target="#form-reservacion">
-                            <i class="fa-regular fa-calendar-days"></i>Crear reservación
-                        </a>
-                    </li>
-                    <li data-role="Administrador, Recepcionista">
-                        <a href="javascript:void(0);" class="nav-link" data-target="#habitaciones">
-                            <i class="far fa-clone"></i>Habitaciones
-                        </a>
-                    </li>
-                    <li data-role="Administrador, Recepcionista">
-                        <a href="javascript:void(0);" class="nav-link" data-target="#reservacion">
-                            <i class="far fa-calendar-alt"></i>Ver reservaciones
-                        </a>
-                    </li>
-                    <li data-role="Administrador">
-                        <a href="javascript:void(0);" class="nav-link" data-target="#usuarios">
-                            <i class="far fa-chart-bar"></i>Usuarios
-                        </a>
-                    </li>
-                    <li data-role="Administrador">
-                        <a href="javascript:void(0);" class="nav-link" data-target="#historial">
-                            <i class="far fa-copy"></i>Historial
-                        </a>
-                    </li>
-                    <li data-role="Administrador, Recepcionista">
-                        <a href="javascript:void(0);" class="nav-link" data-target="#gestionarClientes">
-                            <i class="far fa-bookmark"></i>Gestionar cliente
-                        </a>
-                    </li>
-                    <li data-role="Administrador, Recepcionista">
-                        <a href="javascript:void(0);" class="nav-link" data-target="#mail">
-                            <i class="far fa-envelope"></i>Mensaje
-                        </a>
-                    </li>
-                </ul>
-                
-              </div>
-        <div>
-            <div class="container">
-                <div id="form-reservacion" class="content-section active">
-              <div class="form-container">
-                  <h2>Formulario de Reservación</h2>
-                  <form action="" method="post">
-                      <label for="nombre">Nombre Completo</label>
-                      <input type="text" id="nombre" name="nombre" required>
-      
-                      <label for="email">Correo Electrónico</label>
-                      <input type="email" id="email" name="email" required>
-      
-                      <label for="telefono">Teléfono</label>
-                      <input type="tel" id="telefono" name="telefono" required>
-      
-                      <label for="fecha-llegada">Fecha de Llegada</label>
-                      <input type="date" id="fecha-llegada" name="fecha-llegada" required>
-      
-                      <label for="fecha-salida">Fecha de Salida</label>
-                      <input type="date" id="fecha-salida" name="fecha-salida" required>
-      
-                      <label for="mensaje">Mensaje</label>
-                      <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+  <div class="grid-container">
+    <div id="accordian">
+      <div class="navbar-logo"><img src="logo\png\logo-black-removebg-preview.png" alt="logo"
+          class="navbar-logo-img"><span class="navbar-logo-text">Hotel J&J</span></div>
+      <ul class="show-dropdown main-navbar">
+        <div class="selector-active">
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <li data-role="Administrador, Recepcionista, Cliente">
+          <a href="javascript:void(0);" class="nav-link" data-target="#address-book">
+            <i class="fa-solid fa-calendar-day"></i>Ver reservación
+          </a>
+        </li>
+        <li class="active" data-role="Administrador, Recepcionista, Cliente">
+          <a href="javascript:void(0);" class="nav-link" data-target="#form-reservacion">
+            <i class="fa-regular fa-calendar-days"></i>Crear reservación
+          </a>
+        </li>
+        <li data-role="Administrador, Recepcionista">
+          <a href="javascript:void(0);" class="nav-link" data-target="#habitaciones">
+            <i class="far fa-clone"></i>Habitaciones
+          </a>
+        </li>
+        <li data-role="Administrador, Recepcionista">
+          <a href="javascript:void(0);" class="nav-link" data-target="#reservacion">
+            <i class="far fa-calendar-alt"></i>Ver reservaciones
+          </a>
+        </li>
+        <li data-role="Administrador">
+          <a href="javascript:void(0);" class="nav-link" data-target="#usuarios">
+            <i class="far fa-chart-bar"></i>Usuarios
+          </a>
+        </li>
+        <li data-role="Administrador">
+          <a href="javascript:void(0);" class="nav-link" data-target="#historial">
+            <i class="far fa-copy"></i>Historial
+          </a>
+        </li>
+        <li data-role="Administrador, Recepcionista">
+          <a href="javascript:void(0);" class="nav-link" data-target="#gestionarClientes">
+            <i class="far fa-bookmark"></i>Gestionar cliente
+          </a>
+        </li>
+        <li data-role="Administrador, Recepcionista">
+          <a href="javascript:void(0);" class="nav-link" data-target="#mail">
+            <i class="far fa-envelope"></i>Mensaje
+          </a>
+        </li>
+      </ul>
 
-                      <table class="table-habitacion-dispo">
-                        <label for="Habitaciones-disponibles">Habitaciones disponibles</label>
-                        <thead>
-                          <tr>
-                            <th class="table-form">Tipo de Habitación</th>
-                            <th class="table-form">Cantidad</th>
-                            <th class="table-form">Precio (por noche)</th>
-                            <th class="table-form">Seleccionar</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="table-form"><img class="myImg" src="Img\pexels-fotoaibe-1743231.jpg" alt="Habitación individual"></td>
-                            <td class="table-form">individual</td>
-                            <td class="table-form">$100</td>
-                            <td class="table-form"><input type="radio" name="habitacion" value="single"></td>
-                          </tr>
-                          <tr>
-                            <td class="table-form"><img class="myImg" src="Img\pexels-pixabay-164595.jpg" alt="Habitación cama doble"></td>
-                            <td class="table-form">Doble</td>
-                            <td class="table-form">$150</td>
-                            <td class="table-form"><input type="radio" name="habitacion" value="doble"></td>
-                          </tr>
-                          <tr>
-                            <td class="table-form"><img class="myImg" src="Img\pexels-picasjoe-11362525.jpg" alt="Habitación tipo Suite"></td>
-                            <td class="table-form">Suite</td>
-                            <td class="table-form">$250</td>
-                            <td class="table-form"><input type="radio" name="habitacion" value="suite"></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <div class="button-enviar"><button type="submit">Enviar</button></div>
-                      
-                  </form>
-              </div>
-              
-            </div>
-            </div>
-          <div id="address-book" class="content-section">
-            <h2>Reserva de habitación</h2>
+    </div>
+    <div>
+      <div class="container">
+        <div id="form-reservacion" class="content-section active">
+          <div class="form-container">
+            <h2>Formulario de Reservación</h2>
             <form action="" method="post">
-                <table class="table-fill">
-                    <thead>
-                    <tr>
-                    <th class="text-left">Fecha</th>
-                    <th class="text-left">Habitación</th>
-                    <th class="text-left">Personas</th>
-                    <th class="table-form">Seleccionar</th>
-                    </tr>
-                    </thead>
-                    <tbody class="table-hover">
-                    <tr>
-                    
-                    <td class="text-left">15/02/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="table-form"><input type="radio" name="habitacion" value=""></td>
-                    </tr>
-                    <tr>
-                    
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="table-form"><input type="radio" name="habitacion" value=""></td>
-                    </tr>
-                    <tr>
-                    
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="table-form"><input type="radio" name="habitacion" value=""></td>
-                    </tr>
-                    <tr>
-                    
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="table-form"><input type="radio" name="habitacion" value=""></td>
-                    </tr>
-                    <tr>
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="table-form"><input type="radio" name="habitacion" value=""></td>
-                    </tr>
-                    <tr>
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="table-form"><input type="radio" name="habitacion" value=""></td>
-                    </tr>
-                    <tr>
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="table-form"><input type="radio" name="habitacion" value=""></td>
-                    </tr>
-                    </tbody>
-                    </table>
-                    <div class="button-editar"><button class="editar" type="#">Editar</button>
-                        <button class="editar" type="submit">Cancelar</button></div>
-                    
-                    
-            </form>
-        </div>
-        <div id="habitaciones" class="content-section">
-            <h2>Reserva de habitación</h2>
-            <form action="" method="post">
-                <table class="table-fill">
-                    <thead>
-                    <tr>
-                    <th class="text-left">Fecha</th>
-                    <th class="text-left">Habitación</th>
-                    <th class="text-left">Personas</th>
-                    <th class="text-left">Estado</th>
-                    <th class="table-form">Seleccionar</th>
-                    </tr>
-                    </thead>
-                    <tbody class="table-hover">
-                    <tr>
-                    
-                    <td class="text-left">15/02/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="text-left">Ocupado</td>
-                    <td class="table-form"><input type="radio" name="habitacion"></td>
-                    </tr>
-                    <tr>
-                    
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="text-left">Libre</td>
-                    <td class="table-form"><input type="radio" name="habitacion"></td>
-                    </tr>
-                    <tr>
-                    
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="text-left">Ocupado</td>
-                    <td class="table-form"><input type="radio" name="habitacion"></td>
-                    </tr>
-                    <tr>
-                    
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="text-left">Libre</td>
-                    <td class="table-form"><input type="radio" name="habitacion"></td>
-                    </tr>
-                    <tr>
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="text-left">Ocupado</td>
-                    <td class="table-form"><input type="radio" name="habitacion"></td>
-                    </tr>
-                    <tr>
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="text-left">Libre</td>
-                    <td class="table-form"><input type="radio" name="habitacion"></td>
-                    </tr>
-                    <tr>
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="text-left">Ocupado</td>
-                    <td class="table-form"><input type="radio" name="habitacion"></td>
-                    </tr>
-                    </tbody>
-                    </table>
-                    <div class="button-editar"><button class="editar" type="#">Editar</button></div>
-                    
-                    
-            </form>
-        </div>
-        <div id="reservacion" class="content-section">
-            <h2>Reserva de habitación</h2>
-            <form action="" method="post">
-                <table class="table-fill">
-                    <thead>
-                    <tr>
-                    <th  class="text-left">Nombre</th>
-                    <th class="text-left">Fecha</th>
-                    <th class="text-left">Habitación</th>
-                    <th class="text-left">Personas</th>
-                    <th class="text-left">Estado</th>
-                    <th class="text-left">Seleccionar</th>
-                    </tr>
-                    </thead>
-                    <tbody class="table-hover">
-                    <tr>
-                    <td class="text-left">Pepito Perez</td>
-                    <td class="text-left">15/02/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="text-left">Ocupado</td>
-                    <td class="table-form"><input type="radio" name="habitacion" ></td>
-                    </tr>
-                    <tr>
-                    <td class="text-left">Pepito Perez</td>
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="text-left">Libre</td>
-                    <td class="table-form"><input type="radio" name="habitacion" ></td>
-                    </tr>
-                    <tr>
-                    <td class="text-left">Pepito Perez</td>
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="text-left">Ocupado</td>
-                    <td class="table-form"><input type="radio" name="habitacion" ></td>
-                    </tr>
-                    <tr>
-                    <td class="text-left">Pepito Perez</td>
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="text-left">Libre</td>
-                    <td class="table-form"><input type="radio" name="habitacion" ></td>
-                    </tr>
-                    <tr>
-                    <td class="text-left">Pepito Perez</td>
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="text-left">Ocupado</td>
-                    <td class="table-form"><input type="radio" name="habitacion" ></td>
-                    </tr>
-                    <tr>
-                    <td class="text-left">Pepito Perez</td>
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="text-left">Libre</td>
-                    <td class="table-form"><input type="radio" name="habitacion" ></td>
-                    </tr>
-                    <tr>
-                    <td class="text-left">Pepito Perez</td>
-                    <td class="text-left">26/04/2024</td>
-                    <td class="text-left">102</td>
-                    <td class="text-left">2</td>
-                    <td class="text-left">Ocupado</td>
-                    <td class="table-form"><input type="radio" name="habitacion"></td>
-                    </tr>
-                    </tbody>
-                    </table>
-                    <div class="button-editar"><button class="editar" type="#">Editar</button>
-                    
-            </form>
-            
-        </div>
-        
-        </div>
-        <div id="usuarios" class="content-section">
-            <h2>Usuarios</h2>
-            
-                <table class="table-fill">
-                    <thead>
-                      <tr>
-                        <th class="text-left">Nombre</th>
-                        <th class="text-left">Tipo</th>
-                        <th class="text-left">Seleccionar</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="text-left">Fila 1, Celda 1</td>
-                        <td class="text-left">Fila 1, Celda 2</td>
-                        <td class="table-form"><input type="radio" name="habitacion"></td>
-                      </tr>
-                      <tr>
-                        <td class="text-left">Fila 2, Celda 1</td>
-                        <td> class="text-left"Fila 2, Celda 2</td>
-                        <td class="table-form"><input type="radio" name="habitacion"></td>
-                      </tr>
-                      <tr>
-                        <td class="text-left">Fila 3, Celda 1</td>
-                        <td class="text-left">Fila 3, Celda 2</td>
-                        <td class="table-form"><input type="radio" name="habitacion"></td>
-                      </tr>
-                    </tbody>
-                  </table>
-            
-        </div>
+              <label for="nombre">Nombre Completo</label>
+              <input type="text" id="nombre" name="nombre" required>
 
-        <div id="historial" class="content-section">
-            <h2>Historial</h2>
-            <table class="table-fill">
-                <thead>
-                    <tr>
-                        <th class="text-left">Reserva ID</th>
-                        <th class="text-left">Cliente ID</th>
-                        <th class="text-left">Nombre del Cliente</th>
-                        <th class="text-left">Habitación</th>
-                        <th class="text-left">Fecha de Entrada</th>
-                        <th class="text-left">Fecha de Salida</th>
-                        <th class="text-left">Estado de Reserva</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-left">001</td>
-                        <td class="text-left">1001</td>
-                        <td class="text-left">Juan Pérez</td>
-                        <td class="text-left">101</td>
-                        <td class="text-left">2024-07-01</td>
-                        <td class="text-left">2024-07-05</td>
-                        <td class="text-left">Completada</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left">002</td>
-                        <td class="text-left">1002</td>
-                        <td class="text-left">Ana García</td>
-                        <td class="text-left">102</td>
-                        <td class="text-left">2024-07-03</td>
-                        <td class="text-left">2024-07-07</td>
-                        <td class="text-left">Cancelada</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left">003</td>
-                        <td class="text-left">1003</td>
-                        <td class="text-left">Luis Martínez</td>
-                        <td class="text-left">103</td>
-                        <td class="text-left">2024-07-04</td>
-                        <td class="text-left">2024-07-10</td>
-                        <td class="text-left">Activa</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left">004</td>
-                        <td class="text-left">1004</td>
-                        <td class="text-left">María Rodríguez</td>
-                        <td class="text-left">104</td>
-                        <td class="text-left">2024-07-02</td>
-                        <td class="text-left">2024-07-06</td>
-                        <td class="text-left">Completada</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left">005</td>
-                        <td class="text-left">1005</td>
-                        <td class="text-left">Carlos López</td>
-                        <td class="text-left">105</td>
-                        <td class="text-left">2024-07-05</td>
-                        <td class="text-left">2024-07-09</td>
-                        <td class="text-left">Activa</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <div id="gestionarClientes" class="content-section">
-            <h2>Gestionar clientes</h2>
-            <table class="table-fill">
+              <label for="email">Correo Electrónico</label>
+              <input type="email" id="email" name="email" required>
+
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" required>
+
+              <label for="fecha-llegada">Fecha de Llegada</label>
+              <input type="date" id="fecha-llegada" name="fecha-llegada" required>
+
+              <label for="fecha-salida">Fecha de Salida</label>
+              <input type="date" id="fecha-salida" name="fecha-salida" required>
+
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+              <table class="table-habitacion-dispo">
+                <label for="Habitaciones-disponibles">Habitaciones disponibles</label>
                 <thead>
                   <tr>
-                    <th class="text-left">Nombre</th>
-                    <th class="text-left">Tipo</th>
-                    <th class="text-left">Seleccionar</th>
+                    <th class="table-form">Tipo de Habitación</th>
+                    <th class="table-form">Cantidad</th>
+                    <th class="table-form">Precio (por noche)</th>
+                    <th class="table-form">Seleccionar</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="text-left">Fila 1, Celda 1</td>
-                    <td class="text-left">Fila 1, Celda 2</td>
-                    <td class="table-form"><input type="radio" name="habitacion"></td>
+                    <td class="table-form"><img class="myImg" src="Img\pexels-fotoaibe-1743231.jpg"
+                        alt="Habitación individual"></td>
+                    <td class="table-form">individual</td>
+                    <td class="table-form">$100</td>
+                    <td class="table-form"><input type="radio" name="habitacion" value="single"></td>
                   </tr>
                   <tr>
-                    <td class="text-left">Fila 2, Celda 1</td>
-                    <td> class="text-left"Fila 2, Celda 2</td>
-                    <td class="table-form"><input type="radio" name="habitacion"></td>
+                    <td class="table-form"><img class="myImg" src="Img\pexels-pixabay-164595.jpg"
+                        alt="Habitación cama doble"></td>
+                    <td class="table-form">Doble</td>
+                    <td class="table-form">$150</td>
+                    <td class="table-form"><input type="radio" name="habitacion" value="doble"></td>
                   </tr>
                   <tr>
-                    <td class="text-left">Fila 3, Celda 1</td>
-                    <td class="text-left">Fila 3, Celda 2</td>
-                    <td class="table-form"><input type="radio" name="habitacion"></td>
+                    <td class="table-form"><img class="myImg" src="Img\pexels-picasjoe-11362525.jpg"
+                        alt="Habitación tipo Suite"></td>
+                    <td class="table-form">Suite</td>
+                    <td class="table-form">$250</td>
+                    <td class="table-form"><input type="radio" name="habitacion" value="suite"></td>
                   </tr>
                 </tbody>
               </table>
-        </div>
+              <div class="button-enviar"><button type="submit">Enviar</button></div>
 
-        <div id="mail" class="content-section">
-            <h2>Enviar mensaje</h2>
-            <div class="form-container">
-                <h2>Formulario de mensaje</h2>
-                <form action="" method="post">
-                    <label for="nombre">Nombre Completo</label>
-                    <input type="text" id="nombre" name="nombre" required>
-    
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" required>
-    
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" required>
-    
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </form>
+          </div>
 
-                    
-                    <div class="button-enviar"><button type="submit">Enviar</button></div>
-                    
-                </form>
-            </div>
         </div>
+      </div>
+      <div id="address-book" class="content-section">
+        <h2>Reserva de habitación</h2>
+        <form action="" method="post">
+          <table class="table-fill">
+            <thead>
+              <tr>
+                <th class="text-left">Fecha</th>
+                <th class="text-left">Habitación</th>
+                <th class="text-left">Personas</th>
+                <th class="table-form">Seleccionar</th>
+              </tr>
+            </thead>
+            <tbody class="table-hover">
+              <tr>
+
+                <td class="text-left">15/02/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="table-form"><input type="radio" name="habitacion" value=""></td>
+              </tr>
+              <tr>
+
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="table-form"><input type="radio" name="habitacion" value=""></td>
+              </tr>
+              <tr>
+
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="table-form"><input type="radio" name="habitacion" value=""></td>
+              </tr>
+              <tr>
+
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="table-form"><input type="radio" name="habitacion" value=""></td>
+              </tr>
+              <tr>
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="table-form"><input type="radio" name="habitacion" value=""></td>
+              </tr>
+              <tr>
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="table-form"><input type="radio" name="habitacion" value=""></td>
+              </tr>
+              <tr>
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="table-form"><input type="radio" name="habitacion" value=""></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="button-editar"><button class="editar" type="#">Editar</button>
+            <button class="editar" type="submit">Cancelar</button>
+          </div>
+
+
+        </form>
+      </div>
+      <div id="habitaciones" class="content-section">
+        <h2>Reserva de habitación</h2>
+        <form action="" method="post">
+          <table class="table-fill">
+            <thead>
+              <tr>
+                <th class="text-left">Fecha</th>
+                <th class="text-left">Habitación</th>
+                <th class="text-left">Personas</th>
+                <th class="text-left">Estado</th>
+                <th class="table-form">Seleccionar</th>
+              </tr>
+            </thead>
+            <tbody class="table-hover">
+              <tr>
+
+                <td class="text-left">15/02/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="text-left">Ocupado</td>
+                <td class="table-form"><input type="radio" name="habitacion"></td>
+              </tr>
+              <tr>
+
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="text-left">Libre</td>
+                <td class="table-form"><input type="radio" name="habitacion"></td>
+              </tr>
+              <tr>
+
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="text-left">Ocupado</td>
+                <td class="table-form"><input type="radio" name="habitacion"></td>
+              </tr>
+              <tr>
+
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="text-left">Libre</td>
+                <td class="table-form"><input type="radio" name="habitacion"></td>
+              </tr>
+              <tr>
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="text-left">Ocupado</td>
+                <td class="table-form"><input type="radio" name="habitacion"></td>
+              </tr>
+              <tr>
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="text-left">Libre</td>
+                <td class="table-form"><input type="radio" name="habitacion"></td>
+              </tr>
+              <tr>
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="text-left">Ocupado</td>
+                <td class="table-form"><input type="radio" name="habitacion"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="button-editar"><button class="editar" type="#">Editar</button></div>
+
+
+        </form>
+      </div>
+      <div id="reservacion" class="content-section">
+        <h2>Reserva de habitación</h2>
+        <form action="" method="post">
+          <table class="table-fill">
+            <thead>
+              <tr>
+                <th class="text-left">Nombre</th>
+                <th class="text-left">Fecha</th>
+                <th class="text-left">Habitación</th>
+                <th class="text-left">Personas</th>
+                <th class="text-left">Estado</th>
+                <th class="text-left">Seleccionar</th>
+              </tr>
+            </thead>
+            <tbody class="table-hover">
+              <tr>
+                <td class="text-left">Pepito Perez</td>
+                <td class="text-left">15/02/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="text-left">Ocupado</td>
+                <td class="table-form"><input type="radio" name="habitacion"></td>
+              </tr>
+              <tr>
+                <td class="text-left">Pepito Perez</td>
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="text-left">Libre</td>
+                <td class="table-form"><input type="radio" name="habitacion"></td>
+              </tr>
+              <tr>
+                <td class="text-left">Pepito Perez</td>
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="text-left">Ocupado</td>
+                <td class="table-form"><input type="radio" name="habitacion"></td>
+              </tr>
+              <tr>
+                <td class="text-left">Pepito Perez</td>
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="text-left">Libre</td>
+                <td class="table-form"><input type="radio" name="habitacion"></td>
+              </tr>
+              <tr>
+                <td class="text-left">Pepito Perez</td>
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="text-left">Ocupado</td>
+                <td class="table-form"><input type="radio" name="habitacion"></td>
+              </tr>
+              <tr>
+                <td class="text-left">Pepito Perez</td>
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="text-left">Libre</td>
+                <td class="table-form"><input type="radio" name="habitacion"></td>
+              </tr>
+              <tr>
+                <td class="text-left">Pepito Perez</td>
+                <td class="text-left">26/04/2024</td>
+                <td class="text-left">102</td>
+                <td class="text-left">2</td>
+                <td class="text-left">Ocupado</td>
+                <td class="table-form"><input type="radio" name="habitacion"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="button-editar"><button class="editar" type="#">Editar</button>
+
+        </form>
+
+      </div>
+
+    </div>
+    <div id="usuarios" class="content-section">
+      <h2>Usuarios</h2>
+
+      <table class="table-fill">
+        <thead>
+          <tr>
+            <th class="text-left">Nombre</th>
+            <th class="text-left">Tipo</th>
+            <th class="text-left">Seleccionar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-left">Fila 1, Celda 1</td>
+            <td class="text-left">Fila 1, Celda 2</td>
+            <td class="table-form"><input type="radio" name="habitacion"></td>
+          </tr>
+          <tr>
+            <td class="text-left">Fila 2, Celda 1</td>
+            <td> class="text-left"Fila 2, Celda 2</td>
+            <td class="table-form"><input type="radio" name="habitacion"></td>
+          </tr>
+          <tr>
+            <td class="text-left">Fila 3, Celda 1</td>
+            <td class="text-left">Fila 3, Celda 2</td>
+            <td class="table-form"><input type="radio" name="habitacion"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <div id="historial" class="content-section">
+      <h2>Historial</h2>
+      <table class="table-fill">
+        <thead>
+          <tr>
+            <th class="text-left">Reserva ID</th>
+            <th class="text-left">Cliente ID</th>
+            <th class="text-left">Nombre del Cliente</th>
+            <th class="text-left">Habitación</th>
+            <th class="text-left">Fecha de Entrada</th>
+            <th class="text-left">Fecha de Salida</th>
+            <th class="text-left">Estado de Reserva</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-left">001</td>
+            <td class="text-left">1001</td>
+            <td class="text-left">Juan Pérez</td>
+            <td class="text-left">101</td>
+            <td class="text-left">2024-07-01</td>
+            <td class="text-left">2024-07-05</td>
+            <td class="text-left">Completada</td>
+          </tr>
+          <tr>
+            <td class="text-left">002</td>
+            <td class="text-left">1002</td>
+            <td class="text-left">Ana García</td>
+            <td class="text-left">102</td>
+            <td class="text-left">2024-07-03</td>
+            <td class="text-left">2024-07-07</td>
+            <td class="text-left">Cancelada</td>
+          </tr>
+          <tr>
+            <td class="text-left">003</td>
+            <td class="text-left">1003</td>
+            <td class="text-left">Luis Martínez</td>
+            <td class="text-left">103</td>
+            <td class="text-left">2024-07-04</td>
+            <td class="text-left">2024-07-10</td>
+            <td class="text-left">Activa</td>
+          </tr>
+          <tr>
+            <td class="text-left">004</td>
+            <td class="text-left">1004</td>
+            <td class="text-left">María Rodríguez</td>
+            <td class="text-left">104</td>
+            <td class="text-left">2024-07-02</td>
+            <td class="text-left">2024-07-06</td>
+            <td class="text-left">Completada</td>
+          </tr>
+          <tr>
+            <td class="text-left">005</td>
+            <td class="text-left">1005</td>
+            <td class="text-left">Carlos López</td>
+            <td class="text-left">105</td>
+            <td class="text-left">2024-07-05</td>
+            <td class="text-left">2024-07-09</td>
+            <td class="text-left">Activa</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="gestionarClientes" class="content-section">
+      <h2>Gestionar clientes</h2>
+      <table class="table-fill">
+        <thead>
+          <tr>
+            <th class="text-left">Nombre</th>
+            <th class="text-left">Tipo</th>
+            <th class="text-left">Seleccionar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-left">Fila 1, Celda 1</td>
+            <td class="text-left">Fila 1, Celda 2</td>
+            <td class="table-form"><input type="radio" name="habitacion"></td>
+          </tr>
+          <tr>
+            <td class="text-left">Fila 2, Celda 1</td>
+            <td class="text-left">Fila 2, Celda 2</td>
+            <td class="table-form"><input type="radio" name="habitacion"></td>
+          </tr>
+          <tr>
+            <td class="text-left">Fila 3, Celda 1</td>
+            <td class="text-left">Fila 3, Celda 2</td>
+            <td class="table-form"><input type="radio" name="habitacion"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="mail" class="content-section">
+      <h2>Enviar mensaje</h2>
+      <div class="form-container">
+        <h2>Formulario de mensaje</h2>
+        <form action="" method="post">
+          <label for="nombre">Nombre Completo</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required>
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+
+          <div class="button-enviar"><button type="submit">Enviar</button></div>
+
+        </form>
+      </div>
+    </div>
 
     <!-- Cargar jQuery primero -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Referenciar el archivo JavaScript -->
     <script src="scriptHome.js"></script>
 
-    
+
 </body>
 <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption"></div>
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
 </div>
-  
+
 </html>
