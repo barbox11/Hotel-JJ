@@ -408,7 +408,7 @@
                         </fieldset>
                         <div class="forms_buttons">
                             <button type="button" class="forms_buttons-forgot">¿Has olvidado tu contraseña?</button>
-                            <button type="submit" class="forms_buttons-action">iniciar sesión</button>
+                            <button type="submit"  class="forms_buttons-action">iniciar sesión</button>
                         </div>
                     </form>
                 </div>
@@ -439,7 +439,10 @@
         </div>
     </section>
 
-    <script>    const signupButton = document.getElementById("signup-button"),
+    <script>    
+    
+
+    const signupButton = document.getElementById("signup-button"),
             loginButton = document.getElementById("login-button"),
             userForms = document.getElementById("user_options-forms");
 
@@ -467,11 +470,5 @@
             false
         );
 
-        document.getElementById('login-form').addEventListener('submit', function (e) {
-            e.preventDefault(); // Previene el envío por defecto del formulario
-
-            // Aquí normalmente enviarías los datos de inicio de sesión a tu servidor
-            // Para este ejemplo, simplemente redirigiremos a una nueva página
-            window.location.href = '/Home.html'; // Reemplaza con tu página deseada
-        });
+        
     </script>

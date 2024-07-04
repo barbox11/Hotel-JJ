@@ -1,8 +1,10 @@
     const mysql = require('mysql');
     const express = require('express');
+    const path = require('path');
 
     const app = express();
     const port = 3000;
+    app.use(express.static('views'));
     
     //Configura la conexión a la base de datos
     const connection = mysql.createConnection({
@@ -25,9 +27,26 @@
     app.use(express.json());
     app.use(express.urlencoded({ extended: false }));
 
-    app.get("/", function(req,res){
-        res.render("index");
+    app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+app.get("/", function(req, res){
+    res.render('index');  // Esto buscará 'index.ejs' en la carpeta 'views'
     });
+
+    app.get("/", function(req, res){
+        res.render('index');  // Esto buscará 'index.ejs' en la carpeta 'views'
+        });
+        app.get("/Home", function(req, res) {
+            res.render('Home');
+        });
+
+        app.post("/login", function(req,res){
+            const{email, contrasena}=req.body
+            res.redirect('/Home');
+
+        })
+
 
     app.post("/api/validar", function(req,res){
         const datos = req.body;
