@@ -632,7 +632,7 @@ td.table-form {
         <div id="form-reservacion" class="content-section active">
           <div class="form-container">
             <h2>Formulario de Reservación</h2>
-            <form action="" method="post">
+            <form class="forms_form" action="/reservacion" method="post">
               <label for="nombre">Nombre Completo</label>
               <input type="text" id="nombre" name="nombre" required>
 
@@ -643,10 +643,10 @@ td.table-form {
               <input type="tel" id="telefono" name="telefono" required>
 
               <label for="fecha-llegada">Fecha de Llegada</label>
-              <input type="date" id="fecha-llegada" name="fecha-llegada" required>
+              <input type="date" id="fechallegada" name="fechallegada" required>
 
               <label for="fecha-salida">Fecha de Salida</label>
-              <input type="date" id="fecha-salida" name="fecha-salida" required>
+              <input type="date" id="fechasalida" name="fechasalida" required>
 
               <label for="mensaje">Mensaje</label>
               <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>

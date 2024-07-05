@@ -37,6 +37,7 @@ app.get("/", function(req, res){
     app.get("/", function(req, res){
         res.render('index');  // Esto buscará 'index.ejs' en la carpeta 'views'
         });
+        //conexion con el home
         app.get("/Home", function(req, res) {
             res.render('Home');
         });
@@ -68,6 +69,52 @@ app.get("/", function(req, res){
     app.get("/api/validar", function(req, res) {
         res.status(405).send("Método no permitido");
     });
+
+    app.post("/reservacion", function(req, res) {
+        const { nombre, email, telefono, fechallegada, fechasalida, mensaje, habitacion } = req.body;
+    
+        let registrar = `
+            INSERT INTO reservacion 
+            (nombrecom, correo, telefono, fechadellegada, fechadesalida, mensaje, habitacion) 
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+        `;
+    
+        connection.query(registrar, [nombre, email, telefono, fechallegada, fechasalida, mensaje, habitacion], function(error, results) {
+            if (error) {
+                console.error("Error en la reservación:", error);
+                res.status(500).send("Error al procesar la reservación");
+            } else {
+                console.log("Reservación completada");
+                res.status(200).send("Tu reservación fue completada con éxito");
+            }
+        });
+    });
+    
+    // indesertar datos de reservacion a la base de datos 
+
+    // app.post("/reservacion", function(req,res){
+    //     const datos1 = req.body;
+
+    //     let nombrecon = datos1.nombre1;
+    //     let correo = datos1.email1;
+    //     let telefono1 = datos1.telefono;
+    //     let horadeentrada = datos1.fechallegada;
+    //     let horadesalida = datos1.fechasalida;
+
+    //     let reservar = "INSERT INTO reservacion (nombrecom, correo, telefono, horadellegada, horadesalida) VALUES ('"+nombrecon+"',"+correo+"', '"+telefono1+"','"+horadeentrada+"','"+horadesalida+"')"; 
+
+    //     connection.query(reservar, function(error){
+    //         if(error){
+    //             throw error;
+    //         }else{
+    //             console.log(" tu reservacion fue completada ");
+    //         }
+    //     });
+    //     //console.log("consulta sql:", mysql.format(reservacion [nombrecom, correo, telefono, horadellegada, horadesalida]));
+    //     app.get("/reservacion", function(req, res) {
+    //         res.status(405).send("Método no permitido");
+    //     });
+    // });
 
     // Inicia el servidor
     app.listen(3000, function(){
